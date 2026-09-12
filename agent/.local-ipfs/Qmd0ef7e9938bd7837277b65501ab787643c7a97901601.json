@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "auditId": "2",
+  "timestamp": "2026-09-12T16:15:15.977Z",
+  "contract": {
+    "address": "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c",
+    "codeHash": "0x815a3510caf488dbd193d978464542ee22da4bc9e1f10a471c2d83e0203c1769",
+    "bytecodeLength": 3390
+  },
+  "score": {
+    "score": 78,
+    "riskLevel": "GOOD",
+    "scoreVersion": "1.0",
+    "breakdown": {
+      "critical": 0,
+      "high": 1,
+      "medium": 1,
+      "low": 0,
+      "informational": 0
+    },
+    "totalPenalty": 22
+  },
+  "findings": [
+    {
+      "id": "RULE-005",
+      "title": "ORIGIN Opcode for Authentication",
+      "severity": "MEDIUM",
+      "confidence": 0.8999999999999999,
+      "category": "DETERMINISTIC",
+      "description": "ORIGIN Opcode for Authentication detected via bytecode analysis.",
+      "evidence": "ORIGIN (0x45) found 1 time(s). tx.origin should not be used for authentication.",
+      "impact": "Potential medium-severity issue detected.",
+      "recommendation": "Review the contract source code for origin opcode for authentication.",
+      "references": [],
+      "source": [
+        "rule-engine",
+        "llm"
+      ]
+    },
+    {
+      "id": "RULE-006",
+      "title": "CALL Without Staticcall (Potential Reentrancy)",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "category": "DETERMINISTIC",
+      "description": "CALL Without Staticcall (Potential Reentrancy) detected via bytecode analysis.",
+      "evidence": "CALL (0xf1) found 2 time(s) with no STATICCALL. External calls without view-only pattern may be vulnerable to reentrancy.",
+      "impact": "Potential high-severity issue detected.",
+      "recommendation": "Review the contract source code for call without staticcall (potential reentrancy).",
+      "references": [],
+      "source": [
+        "rule-engine"
+      ]
+    }
+  ],
+  "methodology": "Automated analysis combining deterministic bytecode pattern detection, rule-based security checks, and optional AI-assisted reasoning. This is a preliminary assessment, not a comprehensive security audit.",
+  "limitations": "This automated audit does not constitute a professional security audit. It may not detect all vulnerability classes, especially those requiring deep semantic analysis or economic modeling. LLM analysis is supplementary and may produce false positives or negatives.",
+  "disclaimer": "Decentralized Audit Oracle provides automated preliminary security assessments and does not guarantee the absence of vulnerabilities. This report does not constitute ISO/IEC 27001 certification.",
+  "avalancheContext": {
+    "mcpUsed": true,
+    "network": "localhost",
+    "chainId": 31337,
+    "note": "Avalanche MCP provides read-only context. Transactions are signed by agent wallet."
+  },
+  "integrity": {
+    "reportHash": "0x71784b3fea277b4b53dc62423b49728de9a18657723bf79e587b9ae6dc127636",
+    "generatedAt": "2026-09-12T16:15:15.977Z"
+  }
+}
