@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "auditId": "1",
+  "timestamp": "2026-09-12T14:11:54.370Z",
+  "contract": {
+    "address": "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0",
+    "codeHash": "0x7864e960a2887b0d615a7a3c20bc4f4d0041167e71eb9083a7857eb92d8c040e",
+    "bytecodeLength": 2922
+  },
+  "score": {
+    "score": 100,
+    "riskLevel": "EXCELLENT",
+    "scoreVersion": "1.0",
+    "breakdown": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "informational": 0
+    },
+    "totalPenalty": 0
+  },
+  "findings": [],
+  "methodology": "Automated analysis combining deterministic bytecode pattern detection, rule-based security checks, and optional AI-assisted reasoning. This is a preliminary assessment, not a comprehensive security audit.",
+  "limitations": "This automated audit does not constitute a professional security audit. It may not detect all vulnerability classes, especially those requiring deep semantic analysis or economic modeling. LLM analysis is supplementary and may produce false positives or negatives.",
+  "disclaimer": "Decentralized Audit Oracle provides automated preliminary security assessments and does not guarantee the absence of vulnerabilities. This report does not constitute ISO/IEC 27001 certification.",
+  "avalancheContext": {
+    "mcpUsed": true,
+    "network": "localhost",
+    "chainId": 31337,
+    "note": "Avalanche MCP provides read-only context. Transactions are signed by agent wallet."
+  },
+  "integrity": {
+    "reportHash": "0x05253fa9a9262b3092444fd3a21ec0ae02f1dd915be0d639b7b445250e876b4c",
+    "generatedAt": "2026-09-12T14:11:54.370Z"
+  }
+}

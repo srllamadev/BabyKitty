@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "auditId": "1",
+  "timestamp": "2026-09-12T06:29:22.685Z",
+  "contract": {
+    "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "codeHash": "0x7864e960a2887b0d615a7a3c20bc4f4d0041167e71eb9083a7857eb92d8c040e",
+    "bytecodeLength": 2922
+  },
+  "score": {
+    "score": 26,
+    "riskLevel": "CRITICAL RISK",
+    "scoreVersion": "1.0",
+    "breakdown": {
+      "critical": 1,
+      "high": 2,
+      "medium": 2,
+      "low": 0,
+      "informational": 0
+    },
+    "totalPenalty": 74
+  },
+  "findings": [
+    {
+      "id": "RULE-001",
+      "title": "Potential Reentrancy Pattern",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "category": "DETERMINISTIC",
+      "description": "Potential Reentrancy Pattern detected via bytecode analysis.",
+      "evidence": "Bytecode contains CALL opcode (f1) with balance checks. Bytecode length: 2924 chars.",
+      "impact": "Potential high-severity issue detected.",
+      "recommendation": "Review the contract source code for potential reentrancy pattern.",
+      "source": [
+        "rule-engine"
+      ]
+    },
+    {
+      "id": "RULE-002",
+      "title": "Use of tx.origin for Authorization",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "category": "DETERMINISTIC",
+      "description": "Use of tx.origin for Authorization detected via bytecode analysis.",
+      "evidence": "Bytecode contains ORIGIN opcode (0x45), which may indicate tx.origin usage.",
+      "impact": "Potential medium-severity issue detected.",
+      "recommendation": "Review the contract source code for use of tx.origin for authorization.",
+      "source": [
+        "rule-engine"
+      ]
+    },
+    {
+      "id": "RULE-003",
+      "title": "Delegatecall Usage",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "category": "DETERMINISTIC",
+      "description": "Delegatecall Usage detected via bytecode analysis.",
+      "evidence": "Bytecode contains DELEGATECALL opcode (0xf4).",
+      "impact": "Potential high-severity issue detected.",
+      "recommendation": "Review the contract source code for delegatecall usage.",
+      "source": [
+        "rule-engine"
+      ]
+    },
+    {
+      "id": "RULE-004",
+      "title": "Selfdestruct / Suicide",
+      "severity": "CRITICAL",
+      "confidence": 0.7,
+      "category": "CRITICAL_PATTERN",
+      "description": "Selfdestruct / Suicide detected via bytecode analysis.",
+      "evidence": "Bytecode contains SELFDESTRUCT opcode (0xff).",
+      "impact": "Potential critical-severity issue detected.",
+      "recommendation": "Review the contract source code for selfdestruct / suicide.",
+      "source": [
+        "rule-engine"
+      ]
+    },
+    {
+      "id": "RULE-005",
+      "title": "Low-level Call Without Return Check",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "category": "DETERMINISTIC",
+      "description": "Low-level Call Without Return Check detected via bytecode analysis.",
+      "evidence": "Bytecode uses CALL (0xf1) without apparent return value validation.",
+      "impact": "Potential medium-severity issue detected.",
+      "recommendation": "Review the contract source code for low-level call without return check.",
+      "source": [
+        "rule-engine"
+      ]
+    }
+  ],
+  "methodology": "Automated analysis combining deterministic bytecode pattern detection, rule-based security checks, and optional AI-assisted reasoning. This is a preliminary assessment, not a comprehensive security audit.",
+  "limitations": "This automated audit does not constitute a professional security audit. It may not detect all vulnerability classes, especially those requiring deep semantic analysis or economic modeling. LLM analysis is supplementary and may produce false positives or negatives.",
+  "disclaimer": "Decentralized Audit Oracle provides automated preliminary security assessments and does not guarantee the absence of vulnerabilities. This report does not constitute ISO/IEC 27001 certification.",
+  "integrity": {
+    "reportHash": "0xbd5bbb07ae7a409fc041b7c080eb7b97dd3643c38da66d2b7ab3f95360176bdc",
+    "generatedAt": "2026-09-12T06:29:22.685Z"
+  }
+}
