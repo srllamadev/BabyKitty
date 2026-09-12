@@ -1,0 +1,25 @@
+{
+  "name": "contracts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:fuji": "hardhat run scripts/deploy.ts --network fuji",
+    "seed:local": "hardhat run scripts/seed-demo.ts --network localhost",
+    "seed:fuji": "hardhat run scripts/seed-demo.ts --network fuji",
+    "node": "hardhat node",
+    "verify:fuji": "hardhat verify --network fuji"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "hardhat": "^2.22.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.11.0"
+  }
+}

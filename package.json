@@ -1,0 +1,21 @@
+{
+  "name": "decentralized-audit-oracle",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "agent",
+    "api",
+    "frontend"
+  ],
+  "scripts": {
+    "compile": "npm run compile --workspace=contracts",
+    "test": "npm run test --workspace=contracts",
+    "test:coverage": "npm run test:coverage --workspace=contracts",
+    "deploy:local": "npm run deploy:local --workspace=contracts",
+    "deploy:fuji": "npm run deploy:fuji --workspace=contracts"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
